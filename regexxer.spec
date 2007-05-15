@@ -34,24 +34,12 @@ recursive search through directory trees and Perl-style regular expressions
 rm -rf %{buildroot}
 GCONF_DISABLE_MAKEFILE_SCHEMA_INSTALL=1 %makeinstall_std
 
-# menu
-mkdir -p %{buildroot}%{_menudir}
-cat > %{buildroot}%{_menudir}/%{name} << _EOF_
-?package(%{name}): \
- command="%{_bindir}/%{name}" \
- icon="%{name}.png" \
- longtitle="%{summary}" \
- needs="x11" \
- section="More applications/Development/Tools" \
- title="Regexxer"
-_EOF_
-
 #icons
 mkdir -p %{buildroot}%{_iconsdir} \
          %{buildroot}%{_miconsdir}
-install -D -m 644       pixmaps/regexxer.png %{buildroot}%{_liconsdir}/%{name}.png
-convert -geometry 32x32 pixmaps/regexxer.png %{buildroot}%{_iconsdir}/%{name}.png
-convert -geometry 16x16 pixmaps/regexxer.png %{buildroot}%{_miconsdir}/%{name}.png
+install -D -m 644       ui/regexxer.png %{buildroot}%{_liconsdir}/%{name}.png
+convert -geometry 32x32 ui/regexxer.png %{buildroot}%{_iconsdir}/%{name}.png
+convert -geometry 16x16 ui/regexxer.png %{buildroot}%{_miconsdir}/%{name}.png
 
 # remove seemingly useless english translation
 rm -rf %{buildroot}%{_datadir}/locale/en/
@@ -85,10 +73,9 @@ rm -rf %{buildroot}
 %{_sysconfdir}/gconf/schemas/*.schemas
 %{_bindir}/*
 %{_datadir}/applications/*.desktop
-%{_datadir}/pixmaps/*
+%{_datadir}/icons/*
 %{_datadir}/%{name}
 
-%{_menudir}/%{name}
 %{_iconsdir}/%{name}.png
 %{_liconsdir}/%{name}.png
 %{_miconsdir}/%{name}.png
