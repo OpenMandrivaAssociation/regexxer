@@ -20,7 +20,7 @@ Requires(post):		GConf2 >= 2.3.3
 Requires(preun):	GConf2 >= 2.3.3
 
 %description
-%{name} is a nifty search/replace tool for the desktop user.  It features
+regexxer is a nifty search/replace tool for the desktop user.  It features
 recursive search through directory trees and Perl-style regular expressions
 (using libpcre).
 
