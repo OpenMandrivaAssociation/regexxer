@@ -16,7 +16,8 @@ BuildRequires:	gtkmm2.4-devel
 BuildRequires:	libglademm2.4-devel
 BuildRequires:	gconfmm2.6-devel >= 2.6.1
 BuildRequires:	ImageMagick
-Prereq:		GConf2 >= 2.3.3
+Requires(post):		GConf2 >= 2.3.3
+Requires(preun):	GConf2 >= 2.3.3
 
 %description
 %{name} is a nifty search/replace tool for the desktop user.  It features
