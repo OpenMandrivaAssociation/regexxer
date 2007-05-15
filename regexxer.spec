@@ -1,5 +1,5 @@
-%define	version	0.8
-%define release	0.20040629.1mdk
+%define	version	0.9
+%define release	%mkrel 1
 
 Summary:	GUI search/replace tool supporting Perl regular expression
 Name:		regexxer
@@ -8,7 +8,7 @@ Release:	%{release}
 License:	GPL
 Group:		Text tools
 URL:		http://regexxer.sourceforge.net/
-Source:		http://heanet.dl.sourceforge.net/sourceforge/%{name}/%{name}-%{version}.tar.bz2
+Source:		http://heanet.dl.sourceforge.net/sourceforge/%{name}/%{name}-%{version}.tar.gz
 Buildroot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 # (Abel) utf-8 support only enabled after 4.3-4mdk
 BuildRequires:	pcre-devel >= 4.3-4mdk
