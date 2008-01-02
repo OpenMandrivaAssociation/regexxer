@@ -9,6 +9,7 @@ License:	GPL
 Group:		Text tools
 URL:		http://regexxer.sourceforge.net/
 Source:		http://heanet.dl.sourceforge.net/sourceforge/%{name}/%{name}-%{version}.tar.gz
+Buildroot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 # (Abel) utf-8 support only enabled after 4.3-4mdk
 BuildRequires:	pcre-devel >= 4.3-4mdk
 BuildRequires:	gtkmm2.4-devel
