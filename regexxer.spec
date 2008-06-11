@@ -49,18 +49,10 @@ rm -rf %{buildroot}%{_datadir}/locale/en/
 
 %post
 %update_menus
-export GCONF_CONFIG_SOURCE=`gconftool-2 --get-default-source`
-for SCHEMA in regexxer; do
-        gconftool-2 --makefile-install-rule %{_sysconfdir}/gconf/schemas/${SCHEMA}.schemas > /dev/null
-done
+%post_install_gconf_schemas regexxer
 
 %preun
-if [ "$1" -eq 0 ]; then
-  export GCONF_CONFIG_SOURCE=`gconftool-2 --get-default-source`
-  for SCHEMA in regexxer; do
-    gconftool-2 --makefile-uninstall-rule %{_sysconfdir}/gconf/schemas/${SCHEMA}.schemas > /dev/null
-  done
-fi
+%preun_uninstall_gconf_schemas "$1"
 
 %postun
 %clean_menus
