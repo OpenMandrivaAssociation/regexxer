@@ -47,15 +47,19 @@ rm -rf %{buildroot}%{_datadir}/locale/en/
 
 %find_lang %{name}
 
+%if %mdkversion < 200900
 %post
 %update_menus
 %post_install_gconf_schemas regexxer
+%endif
 
 %preun
 %preun_uninstall_gconf_schemas "$1"
 
+%if %mdkversion < 200900
 %postun
 %clean_menus
+%endif
 
 %clean
 rm -rf %{buildroot}
