@@ -15,7 +15,7 @@ BuildRequires:	pcre-devel >= 4.3-4mdk
 BuildRequires:	gtkmm2.4-devel
 BuildRequires:	libglademm2.4-devel
 BuildRequires:	gconfmm2.6-devel >= 2.6.1
-BuildRequires:	ImageMagick
+BuildRequires:	imagemagick
 Requires(post):		GConf2 >= 2.3.3
 Requires(preun):	GConf2 >= 2.3.3
 
