@@ -1,5 +1,5 @@
 %define	version	0.9
-%define release	%mkrel 4
+%define release	%mkrel 5
 
 Summary:	GUI search/replace tool supporting Perl regular expression
 Name:		regexxer
