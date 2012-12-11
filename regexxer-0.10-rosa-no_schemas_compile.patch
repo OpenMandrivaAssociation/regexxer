@@ -1,0 +1,13 @@
+Index: regexxer-0.10/Makefile.am
+===================================================================
+--- regexxer-0.10.orig/Makefile.am
++++ regexxer-0.10/Makefile.am
+@@ -108,7 +108,7 @@ update_icon_cache   = $(GTK_UPDATE_ICON_
+ @INTLTOOL_XML_NOMERGE_RULE@
+ 
+ install-data-hook: install-update-icon-cache
+-	$(GLIB_COMPILE_SCHEMAS) $(gsettingsschemadir)
++#	$(GLIB_COMPILE_SCHEMAS) $(gsettingsschemadir)
+ #$(gsettingsupdateschemacache) $(gsettingsschemadir)
+ 
+ uninstall-hook: uninstall-update-icon-cache

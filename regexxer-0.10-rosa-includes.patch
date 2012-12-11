@@ -1,0 +1,12 @@
+Index: regexxer-0.10/src/fileshared.h
+===================================================================
+--- regexxer-0.10.orig/src/fileshared.h
++++ regexxer-0.10/src/fileshared.h
+@@ -24,6 +24,7 @@
+ #include "sharedptr.h"
+ 
+ #include <gtkmm/textbuffer.h>
++#include <glibmm/regex.h>
+ #include <functional>
+ #include <utility>
+ #include <vector>
