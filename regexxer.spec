@@ -9,6 +9,7 @@ Source0:	http://downloads.sourceforge.net/project/regexxer/%{name}/%{version}/%{
 Patch0:		regexxer-0.10-rosa-includes.patch
 Patch1:		regexxer-0.10-rosa-glib_h.patch
 Patch2:		regexxer-0.10-rosa-no_schemas_compile.patch
+BuildRequires:	gtk+2.0
 BuildRequires:	imagemagick
 BuildRequires:	intltool
 BuildRequires:	pkgconfig(gconfmm-2.6)
