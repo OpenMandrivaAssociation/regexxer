@@ -1,7 +1,7 @@
 Summary:	GUI search/replace tool supporting Perl regular expression
 Name:		regexxer
 Version:	0.10
-Release:	2
+Release:	3
 License:	GPLv2+
 Group:		Text tools
 Url:		http://regexxer.sourceforge.net/
