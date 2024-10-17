@@ -4,7 +4,7 @@ Version:	0.10
 Release:	3
 License:	GPLv2+
 Group:		Text tools
-Url:		http://regexxer.sourceforge.net/
+Url:		https://regexxer.sourceforge.net/
 Source0:	http://downloads.sourceforge.net/project/regexxer/%{name}/%{version}/%{name}-%{version}.tar.xz
 Patch0:		regexxer-0.10-rosa-includes.patch
 Patch1:		regexxer-0.10-rosa-glib_h.patch
